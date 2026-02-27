@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "새 프로필",
+    "Projects": [
+      {
+        "Path": "QSightClient\\QSightClient.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "PipeTestSender\\PipeTestSender.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

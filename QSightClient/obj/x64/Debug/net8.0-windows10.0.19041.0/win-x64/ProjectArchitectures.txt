@@ -1,0 +1,1 @@
+C:\BoanProject\finalproject\QSight\QSightClient\QSightClient.csproj;x64

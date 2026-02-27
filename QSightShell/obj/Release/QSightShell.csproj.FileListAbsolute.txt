@@ -1,0 +1,10 @@
+C:\BoanProject\finalproject\QSight\QSightShell\bin\Release\QSightShell.dll
+C:\BoanProject\finalproject\QSight\QSightShell\bin\Release\QSightShell.pdb
+C:\BoanProject\finalproject\QSight\QSightShell\bin\Release\QSightShell.tlb
+C:\BoanProject\finalproject\QSight\QSightShell\bin\Release\SharpShell.dll
+C:\BoanProject\finalproject\QSight\QSightShell\bin\Release\SharpShell.xml
+C:\BoanProject\finalproject\QSight\QSightShell\obj\Release\QSightShell.csproj.AssemblyReference.cache
+C:\BoanProject\finalproject\QSight\QSightShell\obj\Release\QSightShell.csproj.CoreCompileInputs.cache
+C:\BoanProject\finalproject\QSight\QSightShell\obj\Release\QSightSh.550F698D.Up2Date
+C:\BoanProject\finalproject\QSight\QSightShell\obj\Release\QSightShell.dll
+C:\BoanProject\finalproject\QSight\QSightShell\obj\Release\QSightShell.pdb

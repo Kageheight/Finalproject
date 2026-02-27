@@ -1,0 +1,14 @@
+C:\BoanProject\finalproject\QSight\PipeTestSender\bin\Release\net8.0\PipeTestSender.exe
+C:\BoanProject\finalproject\QSight\PipeTestSender\bin\Release\net8.0\PipeTestSender.deps.json
+C:\BoanProject\finalproject\QSight\PipeTestSender\bin\Release\net8.0\PipeTestSender.runtimeconfig.json
+C:\BoanProject\finalproject\QSight\PipeTestSender\bin\Release\net8.0\PipeTestSender.dll
+C:\BoanProject\finalproject\QSight\PipeTestSender\bin\Release\net8.0\PipeTestSender.pdb
+C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Release\net8.0\PipeTestSender.GeneratedMSBuildEditorConfig.editorconfig
+C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Release\net8.0\PipeTestSender.AssemblyInfoInputs.cache
+C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Release\net8.0\PipeTestSender.AssemblyInfo.cs
+C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Release\net8.0\PipeTestSender.csproj.CoreCompileInputs.cache
+C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Release\net8.0\PipeTestSender.dll
+C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Release\net8.0\refint\PipeTestSender.dll
+C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Release\net8.0\PipeTestSender.pdb
+C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Release\net8.0\PipeTestSender.genruntimeconfig.cache
+C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Release\net8.0\ref\PipeTestSender.dll

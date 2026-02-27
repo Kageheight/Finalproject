@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="QSightClient.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:QSightClient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="QSightClient">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid>
+        <NavigationView x:ConnectionId='2'
+            x:Name="RootNav"
+            PaneTitle="Q-Sight Agent"
+            IsSettingsVisible="False">
+
+            <NavigationView.MenuItems>
+
+                <NavigationViewItem
+                    Content="Status"
+                    Icon="Home"/>
+
+                <NavigationViewItem
+                    Content="Scan"
+                    Icon="Find"/>
+
+                <NavigationViewItem
+                    Content="Logs"
+                    Icon="Document"/>
+
+                <NavigationViewItem
+                    Content="About"
+                    Icon="Help"/>
+
+            </NavigationView.MenuItems>
+
+            <Frame x:ConnectionId='3' x:Name="ContentFrame"/>
+
+        </NavigationView>
+    </Grid>
+</Window>
+
