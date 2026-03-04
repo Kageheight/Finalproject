@@ -32,6 +32,7 @@ namespace QSightClient.Pages
             NavigationCacheMode = Microsoft.UI.Xaml.Navigation.NavigationCacheMode.Required;
 
             App.IPC.OnMessageReceived += IPC_OnMessageReceived;
+            App.Agent.OnScanStatusChanged += Agent_OnScanStatusChanged;
         }
 
         private void IPC_OnMessageReceived(IPCMessage msg)
@@ -39,6 +40,14 @@ namespace QSightClient.Pages
             DispatcherQueue.TryEnqueue(() =>
             {
                 LastMessageText.Text = $"{msg.Command} : {msg.Path}";
+            });
+        }
+
+        private void Agent_OnScanStatusChanged(string status)
+        {
+            DispatcherQueue.TryEnqueue(() =>
+            {
+                LastMessageText.Text = status;
             });
         }
     }

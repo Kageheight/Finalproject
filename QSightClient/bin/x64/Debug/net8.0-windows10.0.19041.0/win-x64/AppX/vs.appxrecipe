@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\BoanProject\finalproject\QSight\QSightClient\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-02-27T07:19:55.738</Modified>
+      <Modified>2026-03-04T09:59:40.569</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -39,11 +39,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\BoanProject\finalproject\QSight\QSightClient\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>QSightClient.exe</PackagePath>
-      <Modified>2026-02-27T07:19:55.358</Modified>
+      <Modified>2026-03-04T09:59:39.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\BoanProject\finalproject\QSight\QSightClient\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\QSightClient.dll">
       <PackagePath>QSightClient.dll</PackagePath>
-      <Modified>2026-02-27T07:19:55.349</Modified>
+      <Modified>2026-03-04T09:59:39.092</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ageheight\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.24\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -963,7 +963,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\BoanProject\finalproject\QSight\QSightClient\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-02-27T05:54:27.472</Modified>
+      <Modified>2026-03-03T11:14:05.186</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

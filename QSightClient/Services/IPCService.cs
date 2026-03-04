@@ -17,23 +17,33 @@ namespace QSightClient.Services
         {
             while (true)
             {
-                Debug.WriteLine("PIPE WAITING");
-
-                using var server = new NamedPipeServerStream("QSightPipe", PipeDirection.In);
+                var server = new NamedPipeServerStream(
+                            "QSightPipe",
+                            PipeDirection.In,
+                            NamedPipeServerStream.MaxAllowedServerInstances,
+                            PipeTransmissionMode.Message,
+                            PipeOptions.Asynchronous);
 
                 await server.WaitForConnectionAsync();
 
-                Debug.WriteLine("PIPE CONNECTED");
+                _ = HandleClient(server);
+            }
+        }
 
+        private async Task HandleClient(NamedPipeServerStream server)
+        {
+            using (server)
+            {
                 try
                 {
-                    using var reader = new StreamReader(server, Encoding.UTF8);
+                    using var reader = new StreamReader(server, Encoding.UTF8); 
+
                     var json = await reader.ReadLineAsync();
 
                     Debug.WriteLine($"RAW JSON: {json}");
 
                     if (string.IsNullOrEmpty(json))
-                        continue;
+                        return;
 
                     var msg = JsonSerializer.Deserialize<IPCMessage>(
                         json,
@@ -46,6 +56,7 @@ namespace QSightClient.Services
                     {
                         Debug.WriteLine($"MESSAGE RECEIVED: {msg.Command}");
                         OnMessageReceived?.Invoke(msg);
+                        Debug.WriteLine("[IPC] Event Invoked!");
                     }
                 }
                 catch (Exception ex)

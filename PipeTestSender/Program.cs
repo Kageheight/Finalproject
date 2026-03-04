@@ -2,8 +2,7 @@
 using System.Text;
 using System.Text.Json;
 
-using var client =
-    new NamedPipeClientStream(".", "QSightPipe", PipeDirection.Out);
+using var client = new NamedPipeClientStream(".", "QSightPipe", PipeDirection.Out);
 
 client.Connect();
 
@@ -14,7 +13,7 @@ using var writer = new StreamWriter(client, Encoding.UTF8)
 
 var msg = new
 {
-    Command = "scan",
+    Command = "SCAN",
     Path = "C:\\hello.exe"
 };
 

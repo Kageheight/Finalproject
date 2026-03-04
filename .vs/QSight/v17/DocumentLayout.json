@@ -3,22 +3,6 @@
   "WorkspaceRootPath": "C:\\BoanProject\\finalproject\\QSight\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|c:\\boanproject\\finalproject\\qsight\\qsightclient\\pages\\statuspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|solutionrelative:qsightclient\\pages\\statuspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|c:\\boanproject\\finalproject\\qsight\\qsightclient\\pages\\statuspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|solutionrelative:qsightclient\\pages\\statuspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|c:\\boanproject\\finalproject\\qsight\\qsightclient\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|solutionrelative:qsightclient\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|c:\\boanproject\\finalproject\\qsight\\qsightclient\\services\\ipcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|solutionrelative:qsightclient\\services\\ipcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|c:\\boanproject\\finalproject\\qsight\\qsightclient\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|solutionrelative:qsightclient\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,8 +11,24 @@
       "RelativeMoniker": "D:0:0:{D1FD445C-0F5E-42CF-B977-97BD9CDE3730}|PipeTestSender\\PipeTestSender.csproj|solutionrelative:pipetestsender\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|c:\\boanproject\\finalproject\\qsight\\qsightclient\\models\\ipcmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|solutionrelative:qsightclient\\models\\ipcmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|c:\\boanproject\\finalproject\\qsight\\qsightclient\\services\\agentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|solutionrelative:qsightclient\\services\\agentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|c:\\boanproject\\finalproject\\qsight\\qsightclient\\services\\ipcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|solutionrelative:qsightclient\\services\\ipcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|c:\\boanproject\\finalproject\\qsight\\qsightclient\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|solutionrelative:qsightclient\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|c:\\boanproject\\finalproject\\qsight\\qsightclient\\pages\\statuspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|solutionrelative:qsightclient\\pages\\statuspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|c:\\boanproject\\finalproject\\qsight\\qsightclient\\services\\scanengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5961959-1D37-48A3-BA91-D131083A3868}|QSightClient\\QSightClient.csproj|solutionrelative:qsightclient\\services\\scanengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,71 +38,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StatusPage.xaml",
-              "DocumentMoniker": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Pages\\StatusPage.xaml",
-              "RelativeDocumentMoniker": "QSightClient\\Pages\\StatusPage.xaml",
-              "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Pages\\StatusPage.xaml",
-              "RelativeToolTip": "QSightClient\\Pages\\StatusPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-27T05:43:46.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StatusPage.xaml.cs",
-              "DocumentMoniker": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Pages\\StatusPage.xaml.cs",
-              "RelativeDocumentMoniker": "QSightClient\\Pages\\StatusPage.xaml.cs",
-              "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Pages\\StatusPage.xaml.cs",
-              "RelativeToolTip": "QSightClient\\Pages\\StatusPage.xaml.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T08:37:43.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "QSightClient\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\MainWindow.xaml.cs",
-              "RelativeToolTip": "QSightClient\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAwwCoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T04:45:24.861Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\App.xaml.cs",
-              "RelativeDocumentMoniker": "QSightClient\\App.xaml.cs",
-              "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\App.xaml.cs",
-              "RelativeToolTip": "QSightClient\\App.xaml.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T08:26:45.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\BoanProject\\finalproject\\QSight\\PipeTestSender\\Program.cs",
               "RelativeDocumentMoniker": "PipeTestSender\\Program.cs",
               "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\PipeTestSender\\Program.cs",
               "RelativeToolTip": "PipeTestSender\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T11:12:16.637Z",
+              "WhenOpened": "2026-03-04T07:47:22.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StatusPage.xaml.cs",
+              "DocumentMoniker": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Pages\\StatusPage.xaml.cs",
+              "RelativeDocumentMoniker": "QSightClient\\Pages\\StatusPage.xaml.cs",
+              "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Pages\\StatusPage.xaml.cs",
+              "RelativeToolTip": "QSightClient\\Pages\\StatusPage.xaml.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA0wCcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T06:51:49.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ScanEngine.cs",
+              "DocumentMoniker": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Services\\ScanEngine.cs",
+              "RelativeDocumentMoniker": "QSightClient\\Services\\ScanEngine.cs",
+              "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Services\\ScanEngine.cs",
+              "RelativeToolTip": "QSightClient\\Services\\ScanEngine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T06:47:36.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AgentService.cs",
+              "DocumentMoniker": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Services\\AgentService.cs",
+              "RelativeDocumentMoniker": "QSightClient\\Services\\AgentService.cs",
+              "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Services\\AgentService.cs",
+              "RelativeToolTip": "QSightClient\\Services\\AgentService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T05:52:52.174Z",
               "EditorCaption": ""
             },
             {
@@ -113,22 +100,35 @@
               "RelativeDocumentMoniker": "QSightClient\\Services\\IPCService.cs",
               "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Services\\IPCService.cs",
               "RelativeToolTip": "QSightClient\\Services\\IPCService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwC8AAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T09:13:14.877Z",
+              "WhenOpened": "2026-03-03T08:28:07.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IPCMessage.cs",
-              "DocumentMoniker": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Models\\IPCMessage.cs",
-              "RelativeDocumentMoniker": "QSightClient\\Models\\IPCMessage.cs",
-              "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\Models\\IPCMessage.cs",
-              "RelativeToolTip": "QSightClient\\Models\\IPCMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QSightClient\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\MainWindow.xaml.cs",
+              "RelativeToolTip": "QSightClient\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T09:11:56.173Z",
+              "WhenOpened": "2026-03-03T08:28:37.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\App.xaml.cs",
+              "RelativeDocumentMoniker": "QSightClient\\App.xaml.cs",
+              "ToolTip": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\App.xaml.cs",
+              "RelativeToolTip": "QSightClient\\App.xaml.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAywCIAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T08:28:25.909Z",
               "EditorCaption": ""
             }
           ]

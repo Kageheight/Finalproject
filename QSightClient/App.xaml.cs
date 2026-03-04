@@ -9,6 +9,7 @@ using Microsoft.UI.Xaml.Shapes;
 using QSightClient.Services;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -24,7 +25,8 @@ namespace QSightClient
     {
         private Window? _window;
         public static IPCService IPC { get; } = new();
-        
+        public static AgentService Agent { get; } = new();
+
         public App()
         {
             InitializeComponent();
@@ -34,6 +36,10 @@ namespace QSightClient
         {
             _window = new MainWindow();
             _window.Activate();
+
+            IPC.OnMessageReceived += Agent.HandleIPC;
+
+            Debug.WriteLine("App Launched!");
 
             _ = Task.Run(async () =>
             {

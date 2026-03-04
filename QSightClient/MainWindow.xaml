@@ -20,23 +20,12 @@
             IsSettingsVisible="False">
 
             <NavigationView.MenuItems>
-
-                <NavigationViewItem
-                    Content="Status"
-                    Icon="Home"/>
-
-                <NavigationViewItem
-                    Content="Scan"
-                    Icon="Find"/>
-
-                <NavigationViewItem
-                    Content="Logs"
-                    Icon="Document"/>
-
-                <NavigationViewItem
-                    Content="About"
-                    Icon="Help"/>
-
+                
+                <NavigationViewItem Content="Status" Icon="Home" Tag="status"/>
+                <NavigationViewItem Content="Scan" Icon="Find" Tag="scan"/>
+                <NavigationViewItem Content="Logs" Icon="Document" Tag="logs"/>
+                <NavigationViewItem Content="About" Icon="Help" Tag="about"/>
+                
             </NavigationView.MenuItems>
 
             <Frame x:Name="ContentFrame"/>

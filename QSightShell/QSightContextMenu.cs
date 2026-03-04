@@ -1,10 +1,12 @@
 ﻿using SharpShell.Attributes;
 using SharpShell.SharpContextMenu;
-using System.Runtime.InteropServices;
-using System.Windows.Forms;
-using System.IO.Pipes;
 using System.IO;
+using System.IO.Pipes;
+using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Windows.Forms;
+using System.Text.Json;
 
 [ComVisible(true)]
 [COMServerAssociation(AssociationType.AllFiles)]
@@ -33,20 +35,20 @@ public class QSightContextMenu : SharpContextMenu
 
     private void SendScanCommand()
     {
-        try
+        using var pipe = new NamedPipeClientStream(".", "QSightPipe", PipeDirection.Out);
+        pipe.Connect(2000);
+
+        using var writer = new StreamWriter(pipe, Encoding.UTF8);
+
+        var msg = new
         {
-            using var pipe = new NamedPipeClientStream(".", "QSightPipe", PipeDirection.Out);
+            Command = "SCAN",
+            Path = SelectedItemPaths.First()
+        };
 
-            pipe.Connect(2000);
+        var json = JsonSerializer.Serialize(msg);
 
-            using var writer = new StreamWriter(pipe, Encoding.UTF8);
-
-            writer.WriteLine("SCAN");
-            writer.Flush();
-        }
-        catch
-        {
-            MessageBox.Show("QSight가 실행되지 않았습니다.");
-        }
+        writer.WriteLine(json);
+        writer.Flush();
     }
 }

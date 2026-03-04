@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PipeTestSender")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b96171ce3c748dbcbcb36246e52c66166d8a7f4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("PipeTestSender")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PipeTestSender")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

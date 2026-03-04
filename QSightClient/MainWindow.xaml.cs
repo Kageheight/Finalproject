@@ -29,9 +29,17 @@ namespace QSightClient
 
             this.Title = "Q-Sight Agent";
 
-            App.IPC.OnMessageReceived += IPC_ONMessageReceived;
-            //RootNav.SelectionChanged += RootNav_SelectionChanged;
-            //ContentFrame.Navigate(typeof(StatusPage));
+            App.Agent.OnScanRequested += Agent_OnScanRequested;
+            RootNav.SelectionChanged += RootNav_SelectionChanged;
+            ContentFrame.Navigate(typeof(StatusPage));
+        }
+
+        private void Agent_OnScanRequested(IPCMessage message)
+        {
+            DispatcherQueue.TryEnqueue(() =>
+            {
+                ContentFrame.Navigate(typeof(StatusPage), message);
+            });
         }
 
         private void IPC_ONMessageReceived(IPCMessage message)
@@ -44,23 +52,24 @@ namespace QSightClient
 
         private void RootNav_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
-            var item = args.SelectedItem as NavigationViewItem;
+            if (args.SelectedItemContainer is not NavigationViewItem item)
+                return;
 
-            switch (item?.Content?.ToString())
+            switch (item.Tag)
             {
-                case "Status":
+                case "status":
                     ContentFrame.Navigate(typeof(StatusPage));
                     break;
 
-                case "Scan":
+                case "scan":
                     ContentFrame.Navigate(typeof(ScanPage));
                     break;
 
-                case "Logs":
+                case "logs":
                     ContentFrame.Navigate(typeof(LogsPage));
                     break;
 
-                case "About":
+                case "about":
                     ContentFrame.Navigate(typeof(AboutPage));
                     break;
             }

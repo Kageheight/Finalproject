@@ -285,3 +285,4 @@ C:\BoanProject\finalproject\QSight\QSightClient\obj\x64\Debug\net8.0-windows10.0
 C:\BoanProject\finalproject\QSight\QSightClient\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Pages\LogsPage.xbf
 C:\BoanProject\finalproject\QSight\QSightClient\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Pages\ScanPage.xbf
 C:\BoanProject\finalproject\QSight\QSightClient\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Pages\StatusPage.xbf
+C:\BoanProject\finalproject\QSight\QSightClient\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\QSightClient.sourcelink.json

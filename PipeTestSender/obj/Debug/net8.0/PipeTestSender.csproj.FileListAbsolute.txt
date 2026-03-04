@@ -12,3 +12,4 @@ C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Debug\net8.0\refint\PipeTe
 C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Debug\net8.0\PipeTestSender.pdb
 C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Debug\net8.0\PipeTestSender.genruntimeconfig.cache
 C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Debug\net8.0\ref\PipeTestSender.dll
+C:\BoanProject\finalproject\QSight\PipeTestSender\obj\Debug\net8.0\PipeTestSender.sourcelink.json
