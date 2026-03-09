@@ -3179,23 +3179,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ageheight\\.nuget\\packages\\": {},
+    "C:\\Users\\Kongs\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\QSightClient.csproj",
+      "projectUniqueName": "D:\\boanproject\\Project\\Finalproject\\Finalproject\\QSightClient\\QSightClient.csproj",
       "projectName": "QSightClient",
-      "projectPath": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\QSightClient.csproj",
-      "packagesPath": "C:\\Users\\ageheight\\.nuget\\packages\\",
-      "outputPath": "C:\\BoanProject\\finalproject\\QSight\\QSightClient\\obj\\",
+      "projectPath": "D:\\boanproject\\Project\\Finalproject\\Finalproject\\QSightClient\\QSightClient.csproj",
+      "packagesPath": "C:\\Users\\Kongs\\.nuget\\packages\\",
+      "outputPath": "D:\\boanproject\\Project\\Finalproject\\Finalproject\\QSightClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ageheight\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kongs\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

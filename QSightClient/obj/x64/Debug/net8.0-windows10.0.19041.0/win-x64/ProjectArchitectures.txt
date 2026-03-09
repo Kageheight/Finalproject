@@ -1,1 +1,1 @@
-C:\BoanProject\finalproject\QSight\QSightClient\QSightClient.csproj;x64
+D:\boanproject\Project\Finalproject\Finalproject\QSightClient\QSightClient.csproj;x64

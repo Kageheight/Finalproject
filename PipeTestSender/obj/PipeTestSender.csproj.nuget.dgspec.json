@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\BoanProject\\finalproject\\QSight\\PipeTestSender\\PipeTestSender.csproj": {}
+    "D:\\boanproject\\Project\\Finalproject\\Finalproject\\PipeTestSender\\PipeTestSender.csproj": {}
   },
   "projects": {
-    "C:\\BoanProject\\finalproject\\QSight\\PipeTestSender\\PipeTestSender.csproj": {
+    "D:\\boanproject\\Project\\Finalproject\\Finalproject\\PipeTestSender\\PipeTestSender.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BoanProject\\finalproject\\QSight\\PipeTestSender\\PipeTestSender.csproj",
+        "projectUniqueName": "D:\\boanproject\\Project\\Finalproject\\Finalproject\\PipeTestSender\\PipeTestSender.csproj",
         "projectName": "PipeTestSender",
-        "projectPath": "C:\\BoanProject\\finalproject\\QSight\\PipeTestSender\\PipeTestSender.csproj",
-        "packagesPath": "C:\\Users\\ageheight\\.nuget\\packages\\",
-        "outputPath": "C:\\BoanProject\\finalproject\\QSight\\PipeTestSender\\obj\\",
+        "projectPath": "D:\\boanproject\\Project\\Finalproject\\Finalproject\\PipeTestSender\\PipeTestSender.csproj",
+        "packagesPath": "C:\\Users\\Kongs\\.nuget\\packages\\",
+        "outputPath": "D:\\boanproject\\Project\\Finalproject\\Finalproject\\PipeTestSender\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ageheight\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kongs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

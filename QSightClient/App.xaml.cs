@@ -26,6 +26,7 @@ namespace QSightClient
         private Window? _window;
         public static IPCService IPC { get; } = new();
         public static AgentService Agent { get; } = new();
+        public static LogService Logs { get; } = new();
 
         public App()
         {
@@ -34,17 +35,35 @@ namespace QSightClient
 
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
-            _window = new MainWindow();
-            _window.Activate();
-
             IPC.OnMessageReceived += Agent.HandleIPC;
 
-            Debug.WriteLine("App Launched!");
+            if(args.Arguments.Contains("--headless"))
+            {
+                RunHeadless(args.Arguments);
+                return;
+            }
+
+            _window = new MainWindow();
+            _window.Activate();
 
             _ = Task.Run(async () =>
             {
                 await IPC.StartListening();
             });
+        }
+
+        private async void RunHeadless(string arguments)
+        {
+            var parts = arguments.Split("--scan");
+
+            if(parts.Length > 1)
+            {
+                var path = parts[1].Trim().Trim('"');
+
+                await Agent.StartHeadlessScan(path);
+            }
+
+            Environment.Exit(0);
         }
     }
 }

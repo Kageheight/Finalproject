@@ -4,36 +4,49 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <ScrollViewer>
-        <StackPanel Padding="20" Spacing="16">
+    <Grid Padding="20">
 
-            <TextBlock Text="System Status"
-                       FontSize="28"
-                       FontWeight="SemiBold"/>
- 
-            <Border
-                Background ="{ThemeResource CardBackgroundFillColorDefaultBrush}"
-                CornerRadius="10"
-                Padding="16">
+        <StackPanel Spacing="12">
 
-                <StackPanel Spacing="12" Padding="20">
+            <TextBlock
+                Text="Q-Sight Agent Status"
+                FontSize="24"
+                FontWeight="Bold"/>
+            
+            <Border Padding="12" BorderThickness="1" CornerRadius="6">
+                <StackPanel Spacing="8">
 
-                    <TextBlock
-                    Text="Agent Status"
-                    FontSize="24"
-                    FontWeight="Bold"/>
+                    <TextBlock Text="Agent Status"/>
+                    <TextBlock x:ConnectionId='2' x:Name="AgentStatusText" Text="Running"/>
 
-                    <TextBlock x:ConnectionId='2'
-                    x:Name="LastMessageText"
-                    Text="Waiting..."
-                    FontSize="14"/>
+                    <TextBlock Text="Current File"/>
+                    <TextBlock x:ConnectionId='3' x:Name="CurrentFileText" Text="-"/>
+
+                    <TextBlock Text="Queue Size"/>
+                    <TextBlock x:ConnectionId='4' x:Name="QueueSizeText" Text="0"/>
+
+                    <TextBlock Text="Last Message"/>
+                    <TextBlock x:ConnectionId='5' x:Name="LastMessageText" Text="-"/>
+
+                    <ProgressBar x:ConnectionId='6'
+                        x:Name="ScanProgressBar"
+                        Minimum="0"
+                        Maximum="100"
+                        Height="20"
+                        Width ="300"
+                        HorizontalAlignment="Left"/>
+
+                    <ListView x:ConnectionId='7'
+                        x:Name="QueueList"
+                        Height="120"/>
+
 
                 </StackPanel>
-
             </Border>
 
         </StackPanel>
-    </ScrollViewer>
+
+    </Grid>
 
 </Page>
 

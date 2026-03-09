@@ -8,7 +8,36 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Padding="20">
+
+        <StackPanel Spacing="12">
+
+            <TextBlock
+            Text="Scan Logs"
+            FontSize="24"
+            FontWeight="Bold"/>
+
+            <ListView x:ConnectionId='2'
+                x:Name="LogsList"
+                                              
+                IsItemClickEnabled="True">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <StackPanel>
+
+                            <TextBlock Text="{Binding ScanTime}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding FilePath}" FontSize="12"/>
+
+                        </StackPanel>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackPanel>
 
     </Grid>
 </Page>

@@ -4,35 +4,53 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <ScrollViewer>
-        <StackPanel Padding="20" Spacing="16">
+    <Grid Padding="20">
 
-            <TextBlock Text="System Status"
-                       FontSize="28"
-                       FontWeight="SemiBold"/>
- 
-            <Border
-                Background ="{ThemeResource CardBackgroundFillColorDefaultBrush}"
-                CornerRadius="10"
-                Padding="16">
+        <StackPanel Spacing="12">
 
-                <StackPanel Spacing="12" Padding="20">
+            <TextBlock
+                Text="Q-Sight Agent Status"
+                FontSize="24"
+                FontWeight="Bold"/>
+            
+            <Border Padding="12" BorderThickness="1" CornerRadius="6">
+                <StackPanel Spacing="8">
 
-                    <TextBlock
-                    Text="Agent Status"
-                    FontSize="24"
-                    FontWeight="Bold"/>
+                    <TextBlock Text="Agent Status"/>
+                    <TextBlock x:Name="AgentStatusText" Text="Running"/>
 
-                    <TextBlock
-                    x:Name="LastMessageText"
-                    Text="Waiting..."
-                    FontSize="14"/>
+                    <TextBlock Text="Current File"/>
+                    <TextBlock x:Name="CurrentFileText" Text="-"/>
+
+                    <TextBlock Text="Queue Size"/>
+                    <TextBlock x:Name="QueueSizeText" Text="0"/>
+
+                    <TextBlock Text="Last Message"/>
+                    <TextBlock x:Name="LastMessageText" Text="-"/>
+
+                    <ProgressBar
+                        x:Name="ScanProgressBar"
+                        Minimum="0"
+                        Maximum="100"
+                        Height="20"
+                        Width ="300"
+                        HorizontalAlignment="Left"/>
+
+                    <Button
+                        Content="Cancel Scan"
+                        Click="CancelScan_Click"
+                        Width="120"/>
+
+                    <ListView
+                        x:Name="QueueList"
+                        Height="120"/>
+
 
                 </StackPanel>
-
             </Border>
 
         </StackPanel>
-    </ScrollViewer>
+
+    </Grid>
 
 </Page>

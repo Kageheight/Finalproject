@@ -33,6 +33,8 @@ namespace QSightClient.Pages
 
             App.IPC.OnMessageReceived += IPC_OnMessageReceived;
             App.Agent.OnScanStatusChanged += Agent_OnScanStatusChanged;
+            App.Agent.OnScanProgressChanged += Agent_OnScanProgressChanged;
+            App.Agent.OnQueueChanged += Agent_OnQueueChanged;
         }
 
         private void IPC_OnMessageReceived(IPCMessage msg)
@@ -49,6 +51,35 @@ namespace QSightClient.Pages
             {
                 LastMessageText.Text = status;
             });
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.Parameter is IPCMessage msg)
+            {
+                CurrentFileText.Text = msg.Path;
+            }
+        }
+
+        private void Agent_OnScanProgressChanged(int progress)
+        {
+            DispatcherQueue.TryEnqueue(() =>
+            {
+                ScanProgressBar.Value = progress;
+            });
+        }
+
+        private void Agent_OnQueueChanged(List<string> queue)
+        {
+            DispatcherQueue.TryEnqueue(() =>
+            {
+                QueueList.ItemsSource = queue;
+            });
+        }
+
+        private void CancelScan_Click(object sender, RoutedEventArgs e)
+        {
+            App.Agent.CancelScan();
         }
     }
 }
