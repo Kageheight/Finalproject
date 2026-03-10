@@ -579,3 +579,7 @@ D:\boanproject\Project\Finalproject\Finalproject\QSightClient\obj\x64\Debug\net8
 D:\boanproject\Project\Finalproject\Finalproject\QSightClient\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Pages\LogDetailPage.g.cs
 D:\boanproject\Project\Finalproject\Finalproject\QSightClient\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Pages\LogDetailPage.xaml
 D:\boanproject\Project\Finalproject\Finalproject\QSightClient\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Pages\LogDetailPage.xbf
+D:\boanproject\Project\Finalproject\Finalproject\QSightClient\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Apex.WinForms.dll
+D:\boanproject\Project\Finalproject\Finalproject\QSightClient\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ServerManager.exe
+D:\boanproject\Project\Finalproject\Finalproject\QSightClient\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\SharpShell.dll
+D:\boanproject\Project\Finalproject\Finalproject\QSightClient\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\srm.exe

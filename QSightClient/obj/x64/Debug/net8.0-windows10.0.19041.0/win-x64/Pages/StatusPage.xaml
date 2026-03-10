@@ -36,7 +36,12 @@
                         Width ="300"
                         HorizontalAlignment="Left"/>
 
-                    <ListView x:ConnectionId='7'
+                    <Button x:ConnectionId='7'
+                        Content="Cancel Scan"
+                                                
+                        Width="120"/>
+
+                    <ListView x:ConnectionId='8'
                         x:Name="QueueList"
                         Height="120"/>
 

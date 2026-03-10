@@ -9,6 +9,10 @@
       {
         "Path": "PipeTestSender\\PipeTestSender.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "QSightShell\\QSightShell.csproj",
+        "Action": "Start"
       }
     ]
   }

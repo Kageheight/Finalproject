@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cnJvtYcxU3c=",
+  "dgSpecHash": "4CTiJr5QzJw=",
   "success": true,
   "projectFilePath": "D:\\boanproject\\Project\\Finalproject\\Finalproject\\QSightClient\\QSightClient.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\Kongs\\.nuget\\packages\\microsoft.windowsappsdk.runtime\\1.8.260209005\\microsoft.windowsappsdk.runtime.1.8.260209005.nupkg.sha512",
     "C:\\Users\\Kongs\\.nuget\\packages\\microsoft.windowsappsdk.widgets\\1.8.251231004\\microsoft.windowsappsdk.widgets.1.8.251231004.nupkg.sha512",
     "C:\\Users\\Kongs\\.nuget\\packages\\microsoft.windowsappsdk.winui\\1.8.260204000\\microsoft.windowsappsdk.winui.1.8.260204000.nupkg.sha512",
+    "C:\\Users\\Kongs\\.nuget\\packages\\sharpshelltools\\2.2.0\\sharpshelltools.2.2.0.nupkg.sha512",
     "C:\\Users\\Kongs\\.nuget\\packages\\system.numerics.tensors\\9.0.0\\system.numerics.tensors.9.0.0.nupkg.sha512",
     "C:\\Users\\Kongs\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.24\\microsoft.netcore.app.runtime.win-x86.8.0.24.nupkg.sha512",
     "C:\\Users\\Kongs\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512",
@@ -29,5 +30,18 @@
     "C:\\Users\\Kongs\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.24\\microsoft.netcore.app.runtime.win-x64.8.0.24.nupkg.sha512",
     "C:\\Users\\Kongs\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.24\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.24.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "프로젝트 대상 프레임워크 'net8.0-windows10.0.19041' 대신 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1'을(를) 사용하여 패키지 'SharpShellTools 2.2.0'을(를) 복원했습니다. 이 패키지는 프로젝트와 완벽하게 호환되지 않을 수 있습니다.",
+      "projectPath": "D:\\boanproject\\Project\\Finalproject\\Finalproject\\QSightClient\\QSightClient.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\boanproject\\Project\\Finalproject\\Finalproject\\QSightClient\\QSightClient.csproj",
+      "libraryId": "SharpShellTools",
+      "targetGraphs": [
+        "net8.0-windows10.0.19041"
+      ]
+    }
+  ]
 }

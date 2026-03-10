@@ -29,21 +29,21 @@
     <AppXManifest Include="D:\boanproject\Project\Finalproject\Finalproject\QSightClient\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-03-06T08:44:48.536</Modified>
+      <Modified>2026-03-09T12:13:40.133</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\boanproject\Project\Finalproject\Finalproject\QSightClient\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\QSightClient.runtimeconfig.json">
       <PackagePath>QSightClient.runtimeconfig.json</PackagePath>
-      <Modified>2026-03-05T07:35:46.062</Modified>
+      <Modified>2026-03-09T12:13:39.237</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\boanproject\Project\Finalproject\Finalproject\QSightClient\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>QSightClient.exe</PackagePath>
-      <Modified>2026-03-06T08:44:48.038</Modified>
+      <Modified>2026-03-09T12:13:38.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\boanproject\Project\Finalproject\Finalproject\QSightClient\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\QSightClient.dll">
       <PackagePath>QSightClient.dll</PackagePath>
-      <Modified>2026-03-06T08:44:48.032</Modified>
+      <Modified>2026-03-09T12:13:38.203</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.24\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -901,6 +901,22 @@
       <PackagePath>Microsoft.WinUI.dll</PackagePath>
       <Modified>2026-02-04T11:43:44.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\sharpshelltools\2.2.0\lib\Apex.WinForms.dll">
+      <PackagePath>Apex.WinForms.dll</PackagePath>
+      <Modified>2014-11-30T21:13:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\sharpshelltools\2.2.0\lib\ServerManager.exe">
+      <PackagePath>ServerManager.exe</PackagePath>
+      <Modified>2014-11-30T21:13:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\sharpshelltools\2.2.0\lib\SharpShell.dll">
+      <PackagePath>SharpShell.dll</PackagePath>
+      <Modified>2014-11-30T21:13:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\sharpshelltools\2.2.0\lib\srm.exe">
+      <PackagePath>srm.exe</PackagePath>
+      <Modified>2014-11-30T21:13:56.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\system.numerics.tensors\9.0.0\lib\net8.0\System.Numerics.Tensors.dll">
       <PackagePath>System.Numerics.Tensors.dll</PackagePath>
       <Modified>2024-10-29T02:40:16.000</Modified>
@@ -927,7 +943,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\boanproject\Project\Finalproject\Finalproject\QSightClient\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\QSightClient.deps.json">
       <PackagePath>QSightClient.deps.json</PackagePath>
-      <Modified>2026-03-06T07:29:08.987</Modified>
+      <Modified>2026-03-09T12:13:39.167</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\boanproject\Project\Finalproject\Finalproject\QSightClient\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -963,7 +979,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\boanproject\Project\Finalproject\Finalproject\QSightClient\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-03-06T08:44:48.279</Modified>
+      <Modified>2026-03-09T12:13:39.626</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

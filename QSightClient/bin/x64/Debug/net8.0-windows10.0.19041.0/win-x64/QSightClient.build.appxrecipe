@@ -676,6 +676,18 @@
     <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\microsoft.windowsappsdk.winui\1.8.260204000\lib\net6.0-windows10.0.17763.0\Microsoft.WinUI.dll">
       <PackagePath>Microsoft.WinUI.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\sharpshelltools\2.2.0\lib\Apex.WinForms.dll">
+      <PackagePath>Apex.WinForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\sharpshelltools\2.2.0\lib\ServerManager.exe">
+      <PackagePath>ServerManager.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\sharpshelltools\2.2.0\lib\SharpShell.dll">
+      <PackagePath>SharpShell.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\sharpshelltools\2.2.0\lib\srm.exe">
+      <PackagePath>srm.exe</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kongs\.nuget\packages\system.numerics.tensors\9.0.0\lib\net8.0\System.Numerics.Tensors.dll">
       <PackagePath>System.Numerics.Tensors.dll</PackagePath>
     </AppxPackagedFile>

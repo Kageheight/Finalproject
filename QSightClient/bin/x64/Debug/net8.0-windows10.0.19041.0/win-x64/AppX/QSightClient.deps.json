@@ -11,6 +11,7 @@
         "dependencies": {
           "Microsoft.Windows.SDK.BuildTools": "10.0.26100.7705",
           "Microsoft.WindowsAppSDK": "1.8.260209005",
+          "SharpShellTools": "2.2.0",
           "Microsoft.Web.WebView2.Core.Projection": "1.0.3179.45",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "8.0.24",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.57"
@@ -966,6 +967,26 @@
           }
         }
       },
+      "SharpShellTools/2.2.0": {
+        "runtime": {
+          "lib/Apex.WinForms.dll": {
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
+          },
+          "lib/ServerManager.exe": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          },
+          "lib/SharpShell.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          },
+          "lib/srm.exe": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
       "System.Numerics.Tensors/9.0.0": {
         "runtime": {
           "lib/net8.0/System.Numerics.Tensors.dll": {
@@ -1090,6 +1111,13 @@
       "sha512": "sha512-DSpA01+iPXwky4O1uZCrdClSi2aRIYTIhmsTeC1EsJmWBFpSirwNAg4EGHejijV6u4ZVkTdyv3px0Y2P3fp72Q==",
       "path": "microsoft.windowsappsdk.winui/1.8.260204000",
       "hashPath": "microsoft.windowsappsdk.winui.1.8.260204000.nupkg.sha512"
+    },
+    "SharpShellTools/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n8g9PuV0URm7ke1ANokCAd85YIfN8yt36qipdFB1n6/I+auZ6Xy3P7I090c8quvIbKQ5Cr+Bra7mTnZK+IDOYA==",
+      "path": "sharpshelltools/2.2.0",
+      "hashPath": "sharpshelltools.2.2.0.nupkg.sha512"
     },
     "System.Numerics.Tensors/9.0.0": {
       "type": "package",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QSightClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a928c5e839b68f3cdf0aedcc451ac2906803f562")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8af99c7687444515bb1ee41d4fcaa5e8d6be4944")]
 [assembly: System.Reflection.AssemblyProductAttribute("QSightClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QSightClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
