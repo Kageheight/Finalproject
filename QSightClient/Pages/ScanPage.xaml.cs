@@ -46,17 +46,14 @@ namespace QSightClient.Pages
 
             StartScanButton.IsEnabled = false;
             SelectFileButton.IsEnabled = false;
-            ScanStatusText.Text = "분석 중";
+            ScanStatusText.Text = "분석 중 version2";
 
             try
             {
-                // SHA256 계산
                 var sha256 = ComputeSha256(_selectedFilePath);
                 var fileName = Path.GetFileName(_selectedFilePath);
 
-                // 스캔 생성
                 var scanId = await App.Api.CreateScanAsync("EMP001", fileName, sha256);
-
                 if (scanId == null)
                 {
                     ScanStatusText.Text = "스캔 생성 실패";
@@ -65,25 +62,43 @@ namespace QSightClient.Pages
 
                 _currentScanId = scanId;
                 ScanIdText.Text = scanId;
-                ScanStatusText.Text = "서버 전송 완료, 분석 대기 중...";
+                await App.Api.CompleteScanAsync(scanId, fileName);
 
-                // 결과 조회
+                await System.Threading.Tasks.Task.Delay(15000);
+
                 var result = await App.Api.GetScanResultAsync(scanId);
-                if (result?.scan != null)
+                var staticResult = result?.scan?.static_result ?? "unknown";
+
+                ScanStatusText.Text = "완료";
+                ScanSeverityText.Text = result?.scan?.severity ?? "-";
+                StaticResultText.Text = staticResult;
+
+                // 로그 저장
+                App.Logs.SaveLog(new QSightClient.Models.ScanLog
                 {
-                    ScanStatusText.Text = result.scan.status switch
-                    {
-                        "done" => "완료",
-                        "analyzing" => "분석 중",
-                        "failed" => " 실패",
-                        _ => result.scan.status ?? "-"
-                    };
-                    ScanSeverityText.Text = result.scan.severity ?? "-";
-                    StaticResultText.Text = result.scan.static_result ?? "-";
-                }
+                    FilePath = _selectedFilePath,
+                    FileName = fileName,
+                    ScanId = scanId,
+                    StaticResult = staticResult,
+                    Timestamp = DateTime.Now,
+                    ScanTime = DateTime.Now,
+                    Result = staticResult
+                });
+
+                // 파일로 직접 확인
+                File.WriteAllText(
+                    @"C:\Users\jeang\Desktop\qsight_log_test.txt",
+                    $"파일:{fileName}, 결과:{staticResult}, 로그수:{App.Logs.Logs.Count}, 시간:{DateTime.Now}"
+                );
+
+                ScanStatusText.Text = $"완료 - {staticResult}";
             }
             catch (Exception ex)
             {
+                File.WriteAllText(
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Desktop", "qsight_error.txt"),
+                    ex.ToString()
+                );
                 ScanStatusText.Text = $"오류: {ex.Message}";
             }
             finally

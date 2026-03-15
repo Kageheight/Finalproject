@@ -27,8 +27,8 @@
 
                         <StackPanel>
 
-                            <TextBlock Text="{Binding ScanTime}" FontWeight="Bold"/>
-                            <TextBlock Text="{Binding FilePath}" FontSize="12"/>
+                            <TextBlock Text="{Binding TimeStamp}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding FileName}" FontSize="12"/>
 
                         </StackPanel>
 

@@ -1,9 +1,5 @@
 using Microsoft.UI.Xaml.Controls;
-using QSightClient.Models;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
+using Microsoft.UI.Xaml.Navigation;
 
 namespace QSightClient.Pages
 {
@@ -12,34 +8,18 @@ namespace QSightClient.Pages
         public LogsPage()
         {
             InitializeComponent();
-
-            LoadLogs();
         }
 
-        private void LoadLogs()
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            var dir = Path.Combine(AppContext.BaseDirectory, "logs");
-
-            if (!Directory.Exists(dir))
-                return;
-
-            var list = new List<ScanLog>();
-
-            foreach (var file in Directory.GetFiles(dir, "*.json"))
-            {
-                var json = File.ReadAllText(file);
-                var log = JsonSerializer.Deserialize<ScanLog>(json);
-
-                if (log != null)
-                    list.Add(log);
-            }
-
-            LogsList.ItemsSource = list;
+            base.OnNavigatedTo(e);
+            LogsList.ItemsSource = null;
+            LogsList.ItemsSource = App.Logs.Logs;
         }
 
         private void LogsList_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (e.ClickedItem is ScanLog log)
+            if (e.ClickedItem is QSightClient.Models.ScanLog log)
             {
                 Frame.Navigate(typeof(LogDetailPage), log);
             }

@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace QSightClient.Services
 {
@@ -58,6 +59,31 @@ namespace QSightClient.Services
             catch
             {
                 return null;
+            }
+        }
+
+        public async Task<bool> CompleteScanAsync(string scanId, string fileName)
+        {
+            try
+            {
+                var payload = new
+                {
+                    file_name = fileName,
+                    object_key = $"uploads/{scanId}/{fileName}"
+                };
+                var response = await _http.PostAsJsonAsync($"/scans/{scanId}/uploads/complete", payload);
+
+                var status = response.StatusCode.ToString();
+                var body = await response.Content.ReadAsStringAsync();
+                System.IO.File.WriteAllText(@"C:\Users\jeang\Desktop\complete_result.txt",
+                    $"Status: {status}\nBody: {body}\nScanId: {scanId}");
+
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                System.IO.File.WriteAllText(@"C:\Users\jeang\Desktop\complete_error.txt", ex.ToString());
+                return false;
             }
         }
 

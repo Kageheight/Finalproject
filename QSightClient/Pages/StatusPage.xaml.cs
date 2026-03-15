@@ -29,6 +29,25 @@ namespace QSightClient.Pages
         {
             InitializeComponent();
 
+            // WatcherService 이벤트 연결
+            App.Watcher.OnFileDetected += fileName =>
+            {
+                DispatcherQueue.TryEnqueue(() =>
+                {
+                    CurrentFileText.Text = fileName;
+                    LastMessageText.Text = $"파일 감지: {fileName}";
+                });
+            };
+
+            App.Watcher.OnScanComplete += (fileName, result) =>
+            {
+                DispatcherQueue.TryEnqueue(() =>
+                {
+                    LastMessageText.Text = $"스캔 완료: {fileName} → {result}";
+                    _ = LoadDashboardAsync();
+                });
+            };
+
             NavigationCacheMode = Microsoft.UI.Xaml.Navigation.NavigationCacheMode.Required;
 
             App.IPC.OnMessageReceived += IPC_OnMessageReceived;

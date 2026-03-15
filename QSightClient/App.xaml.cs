@@ -28,6 +28,7 @@ namespace QSightClient
         public static AgentService Agent { get; } = new();
         public static LogService Logs { get; } = new();
         public static ApiService Api { get; } = new();
+        public static WatcherService Watcher { get; } = new(Api);
 
         public App()
         {
@@ -48,6 +49,19 @@ namespace QSightClient
 
             MainWindow = new MainWindow();
             MainWindow.Activate();
+            Logs.LoadFromDisk();
+
+            Watcher.OnFileDetected += fileName =>
+            {
+                Debug.WriteLine($"새 파일 감지: {fileName}");
+            };
+
+            Watcher.OnScanComplete += (fileName, result) =>
+            {
+                Debug.WriteLine($"스캔 완료: {fileName} → {result}");
+            };
+
+            Watcher.StartWatching();
 
             _ = Task.Run(async () =>
             {
