@@ -28,14 +28,18 @@
                         Click="SelectFile_Click"
                         Width="120"/>
 
-					<Button
+                    <Button
                         Content="스캔 시작"
                         x:Name="StartScanButton"
                         Click="StartScan_Click"
                         Width="120"
                         IsEnabled="False"/>
 
-					<TextBlock Text="─────────────────" Opacity="0.3"/>
+                    <Button Content="화이트리스트 등록"
+                        Click="OnWhitelistClick"
+                        Margin="10"/>
+
+                    <TextBlock Text="─────────────────" Opacity="0.3"/>
 					<TextBlock Text="스캔 결과" FontWeight="Bold" FontSize="16"/>
 
 					<TextBlock Text="상태"/>

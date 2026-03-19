@@ -29,7 +29,6 @@ namespace QSightClient
 
             this.Title = "Q-Sight Agent";
 
-            App.Agent.OnScanRequested += Agent_OnScanRequested;
             RootNav.SelectionChanged += RootNav_SelectionChanged;
             ContentFrame.Navigate(typeof(StatusPage));
         }

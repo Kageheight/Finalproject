@@ -15,5 +15,7 @@ namespace QSightClient.Models
         public DateTime Timestamp { get; set; }
         public DateTime ScanTime { get; set; }
         public string Result { get; set; } = "";
+
+        public string Sha256 { get; set; } = "";
     }
 }

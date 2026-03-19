@@ -14,7 +14,6 @@ namespace QSightClient.Services
         private readonly ScanEngine _engine = new();
         private readonly ConcurrentQueue<ScanRequest> _queue = new();
         private bool _isProcessing = false;
-        public event Action<IPCMessage>? OnScanRequested;
         public event Action<string>? OnScanStatusChanged;
         public event Action<int>? OnScanProgressChanged;
         public event Action<List<string>>? OnQueueChanged;
@@ -43,9 +42,9 @@ namespace QSightClient.Services
             }
         }
 
-        public async Task StartHeadlessScan(string path)
+        public async Task<ScanLog?> StartHeadlessScan(string path)
         {
-            await _engine.StartScan(path);
+            return await _engine.StartScan(path);
         }
 
         private void NotifyQueue()

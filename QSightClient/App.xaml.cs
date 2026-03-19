@@ -23,12 +23,12 @@ namespace QSightClient
 {
     public partial class App : Application
     {
-        private Window? _window;
         public static IPCService IPC { get; } = new();
         public static AgentService Agent { get; } = new();
         public static LogService Logs { get; } = new();
         public static ApiService Api { get; } = new();
         public static WatcherService Watcher { get; } = new(Api);
+        public static WhiteListService WhiteList { get; set; } = new();
 
         public App()
         {

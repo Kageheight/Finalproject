@@ -56,47 +56,14 @@ namespace QSightClient.Services
 
 			try
 			{
-				var sha256 = ComputeSha256(e.FullPath);
-				var fileName = Path.GetFileName(e.FullPath);
+                await App.Agent.StartHeadlessScan(e.FullPath);
 
-                var scanId = await _api.CreateScanAsync("EMP001", fileName, sha256);
-                if (scanId == null) return;
-
-                // VT 분석 트리거
-                await _api.CompleteScanAsync(scanId, fileName);
-
-                // 결과 조회 (8초 대기)
-                await Task.Delay(8000);
-
-                var scanResult = await _api.GetScanResultAsync(scanId);
-                var staticResult = scanResult?.scan?.static_result ?? "unknown";
-
-                // 로그 저장
-                App.Logs.SaveLog(new QSightClient.Models.ScanLog
-                {
-                    FilePath = e.FullPath,
-                    FileName = fileName,
-                    ScanId = scanId,
-                    StaticResult = staticResult,
-                    Timestamp = DateTime.Now,
-                    ScanTime = DateTime.Now,
-                    Result = staticResult
-                });
-
-                OnScanComplete?.Invoke(fileName, staticResult);
-            }
+                OnScanComplete?.Invoke(e.Name ?? "", "requested");
+			}
 			catch
 			{
 				// 파일 접근 실패 등 무시
 			}
-		}
-
-		private static string ComputeSha256(string filePath)
-		{
-			using var sha256 = SHA256.Create();
-			using var stream = File.OpenRead(filePath);
-			var hash = sha256.ComputeHash(stream);
-			return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
 		}
 	}
 }

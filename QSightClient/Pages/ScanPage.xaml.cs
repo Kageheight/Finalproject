@@ -1,6 +1,7 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
+using QSightClient.Models;
 using System;
 using System.IO;
 using System.Security.Cryptography;
@@ -11,7 +12,8 @@ namespace QSightClient.Pages
     public sealed partial class ScanPage : Page
     {
         private string? _selectedFilePath;
-        private string? _currentScanId;
+        //private string? _currentScanId;
+        private ScanLog _selectedLog = new();
 
         public ScanPage()
         {
@@ -50,55 +52,15 @@ namespace QSightClient.Pages
 
             try
             {
-                var sha256 = ComputeSha256(_selectedFilePath);
-                var fileName = Path.GetFileName(_selectedFilePath);
+                var log = await App.Agent.StartHeadlessScan(_selectedFilePath);
 
-                var scanId = await App.Api.CreateScanAsync("EMP001", fileName, sha256);
-                if (scanId == null)
-                {
-                    ScanStatusText.Text = "스캔 생성 실패";
-                    return;
-                }
+                if (log == null) return;
 
-                _currentScanId = scanId;
-                ScanIdText.Text = scanId;
-                await App.Api.CompleteScanAsync(scanId, fileName);
-
-                await System.Threading.Tasks.Task.Delay(15000);
-
-                var result = await App.Api.GetScanResultAsync(scanId);
-                var staticResult = result?.scan?.static_result ?? "unknown";
-
-                ScanStatusText.Text = "완료";
-                ScanSeverityText.Text = result?.scan?.severity ?? "-";
-                StaticResultText.Text = staticResult;
-
-                // 로그 저장
-                App.Logs.SaveLog(new QSightClient.Models.ScanLog
-                {
-                    FilePath = _selectedFilePath,
-                    FileName = fileName,
-                    ScanId = scanId,
-                    StaticResult = staticResult,
-                    Timestamp = DateTime.Now,
-                    ScanTime = DateTime.Now,
-                    Result = staticResult
-                });
-
-                // 파일로 직접 확인
-                File.WriteAllText(
-                    @"C:\Users\jeang\Desktop\qsight_log_test.txt",
-                    $"파일:{fileName}, 결과:{staticResult}, 로그수:{App.Logs.Logs.Count}, 시간:{DateTime.Now}"
-                );
-
-                ScanStatusText.Text = $"완료 - {staticResult}";
+                _selectedLog = log;
+                ScanStatusText.Text = $"완료: { log.StaticResult}";
             }
             catch (Exception ex)
             {
-                File.WriteAllText(
-                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Desktop", "qsight_error.txt"),
-                    ex.ToString()
-                );
                 ScanStatusText.Text = $"오류: {ex.Message}";
             }
             finally
@@ -108,12 +70,15 @@ namespace QSightClient.Pages
             }
         }
 
-        private static string ComputeSha256(string filePath)
+        private void OnWhitelistClick(object sender, RoutedEventArgs e)
         {
-            using var sha256 = SHA256.Create();
-            using var stream = File.OpenRead(filePath);
-            var hash = sha256.ComputeHash(stream);
-            return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+            if (_selectedLog == null)
+                return;
+
+            App.WhiteList.Add(_selectedLog.FileName, _selectedLog.Sha256);
+
+            // 사용자 피드백
+            ScanStatusText.Text = "화이트리스트에 등록되었습니다.";
         }
     }
 }

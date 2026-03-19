@@ -82,7 +82,7 @@ namespace QSightClient.Services
             }
             catch (Exception ex)
             {
-                System.IO.File.WriteAllText(@"C:\Users\jeang\Desktop\complete_error.txt", ex.ToString());
+                System.IO.File.WriteAllText(@"C:\Users\Kongs\Desktop\complete_error.txt", ex.ToString());
                 return false;
             }
         }

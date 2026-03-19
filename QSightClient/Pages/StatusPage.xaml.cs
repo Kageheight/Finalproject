@@ -130,6 +130,5 @@ namespace QSightClient.Pages
                 CriticalSeverityText.Text = summary.summary.severity_critical_count.ToString();
             }
         }
-
     }
 }
