@@ -1,20 +1,12 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using QSightClient.Services;
 using QSightClient.Pages;
 using QSightClient.Models;
+using Microsoft.UI;
+using Microsoft.UI.Windowing;
+using Windows.Graphics;
 
 namespace QSightClient
 {
@@ -27,26 +19,35 @@ namespace QSightClient
         {
             InitializeComponent();
 
-            this.Title = "Q-Sight Agent";
+            var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            WindowId windowId = Win32Interop.GetWindowIdFromWindow(hWnd);
+            AppWindow appWindow = AppWindow.GetFromWindowId(windowId);
 
+            if (appWindow != null)
+            {
+                uint width = 600;
+                uint height = 350;
+                appWindow.Resize(new SizeInt32 { Width = (int)width, Height = (int)height });
+            }
+
+            this.Title = "Q-Sight Agent";
             RootNav.SelectionChanged += RootNav_SelectionChanged;
             ContentFrame.Navigate(typeof(StatusPage));
+
+            ContentFrame.Navigated += (s, e) =>
+            {
+                var allowedPages = new[] { typeof(LogDetailPage) };
+
+                RootNav.IsBackEnabled = allowedPages.Contains(e.SourcePageType) && ContentFrame.CanGoBack;
+            };
         }
 
-        private void Agent_OnScanRequested(IPCMessage message)
+        private void RootNav_BackRequested(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs args)
         {
-            DispatcherQueue.TryEnqueue(() =>
+            if (ContentFrame.CanGoBack)
             {
-                ContentFrame.Navigate(typeof(StatusPage), message);
-            });
-        }
-
-        private void IPC_ONMessageReceived(IPCMessage message)
-        {
-            _ = DispatcherQueue.TryEnqueue(() =>
-            {
-                ContentFrame.Navigate(typeof(StatusPage), message);
-            });
+                ContentFrame.GoBack();
+            }
         }
 
         private void RootNav_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)

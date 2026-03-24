@@ -11,6 +11,7 @@ public class WhiteListService
     "whitelist.json");
 
     private List<WhiteItem> _items = new();
+    private HashSet<string> _shaLookup = new(StringComparer.OrdinalIgnoreCase);
 
     public WhiteListService()
     {
@@ -19,13 +20,12 @@ public class WhiteListService
 
     public bool IsWhitelisted(string sha256)
     {
-        return _items.Any(x => x.Sha256 == sha256);
+        return _shaLookup.Contains(sha256);
     }
 
     public void Add(string fileName, string sha256)
     {
-        if (_items.Any(x => x.Sha256 == sha256))
-            return;
+        if (_shaLookup.Contains(sha256)) return;
 
         _items.Add(new WhiteItem
         {
@@ -35,21 +35,39 @@ public class WhiteListService
             Source = "manual"
         });
 
+        _shaLookup.Add(sha256);
         Save();
     }
 
     private void Load()
     {
-        if (!File.Exists(FilePath)) return;
+        try
+        {
+            if (!File.Exists(FilePath)) return;
 
-        var json = File.ReadAllText(FilePath);
-        _items = JsonSerializer.Deserialize<List<WhiteItem>>(json) ?? new();
+            var json = File.ReadAllText(FilePath);
+            _items = JsonSerializer.Deserialize<List<WhiteItem>>(json) ?? new();
+
+            _shaLookup = new HashSet<string>(_items.Select(x => x.Sha256), StringComparer.OrdinalIgnoreCase);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Load 정지: {ex.Message}");
+            _items = new();
+        }
     }
 
     private void Save()
     {
-        var json = JsonSerializer.Serialize(_items, new JsonSerializerOptions { WriteIndented = true });
-        File.WriteAllText(FilePath, json);
+        try
+        {
+            var json = JsonSerializer.Serialize(_items, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(FilePath, json);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Save 실패: {ex.Message}");
+        }
     }
 }
 

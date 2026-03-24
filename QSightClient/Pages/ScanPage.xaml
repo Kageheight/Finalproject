@@ -8,56 +8,67 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-	<Grid Padding="20">
-		<StackPanel Spacing="12">
+    <Grid Padding="20">
+        <StackPanel Spacing="20">
 
-			<TextBlock
+            <TextBlock
                 Text="파일 스캔"
                 FontSize="24"
                 FontWeight="Bold"/>
 
-			<Border Padding="12" BorderThickness="1" CornerRadius="6">
-				<StackPanel Spacing="8">
+            <Border Padding="16" BorderThickness="1" BorderBrush="{ThemeResource SystemControlForegroundBaseLowBrush}" CornerRadius="8">
+                <Grid ColumnSpacing="24">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-					<TextBlock Text="분석할 파일 선택"/>
-					<TextBlock x:Name="SelectedFileText" Text="선택된 파일 없음" Opacity="0.6"/>
+                    <StackPanel Grid.Column ="0"  Spacing="12">
+                        <TextBlock Text="파일 제어" FontWeight="SemiBold" FontSize="16"/>
 
-					<Button
-                        Content="파일 선택"
-                        x:Name="SelectFileButton"
-                        Click="SelectFile_Click"
-                        Width="120"/>
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="분석할 파일 선택" FontSize="12" Opacity="0.8"/>
+                            <TextBlock x:Name="SelectedFileText" Text="선택된 파일 없음" Opacity="0.6" TextWrapping="Wrap"/>
+                        </StackPanel>
 
-                    <Button
-                        Content="스캔 시작"
-                        x:Name="StartScanButton"
-                        Click="StartScan_Click"
-                        Width="120"
-                        IsEnabled="False"/>
+                        <Button x:Name="SelectFileButton" Content="파일 선택" Click="SelectFile_Click" Width="150" HorizontalAlignment="Stretch"/>
+                        <Button x:Name="StartScanButton" Content="스캔 시작" Click="StartScan_Click" Width="150" IsEnabled="False" HorizontalAlignment="Stretch" Style="{StaticResource AccentButtonStyle}"/>
+                        <Button x:Name="RegistWhiteListButton" Content="화이트리스트 등록" Click="OnWhitelistClick" Width="150" IsEnabled="False" HorizontalAlignment="Stretch"/>
+                    </StackPanel>
 
-                    <Button Content="화이트리스트 등록"
-                        Click="OnWhitelistClick"
-                        Margin="10"/>
+                    <Rectangle Grid.Column="1" Width="1" Fill="{ThemeResource SystemControlForegroundBaseLowBrush}" Opacity="0.3" Margin="0,10"/>
 
-                    <TextBlock Text="─────────────────" Opacity="0.3"/>
-					<TextBlock Text="스캔 결과" FontWeight="Bold" FontSize="16"/>
+                    <StackPanel Grid.Column="2" Spacing="12">
+                        <TextBlock Text="스캔 결과" FontWeight="Bold" FontSize="16"/>
 
-					<TextBlock Text="상태"/>
-					<TextBlock x:Name="ScanStatusText" Text="-"/>
+                        <Grid RowSpacing="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
 
-					<TextBlock Text="위험도"/>
-					<TextBlock x:Name="ScanSeverityText" Text="-"/>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="상태" VerticalAlignment="Center" Opacity="0.7"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="ScanStatusText" Text="-" FontWeight="SemiBold"/>
 
-					<TextBlock Text="정적 분석 결과"/>
-					<TextBlock x:Name="StaticResultText" Text="-"/>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="위험도" VerticalAlignment="Center" Opacity="0.7"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="ScanSeverityText" Text="-"/>
 
-					<TextBlock Text="Scan ID"/>
-					<TextBlock x:Name="ScanIdText" Text="-" Opacity="0.5" FontSize="11"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="정적 분석" VerticalAlignment="Center" Opacity="0.7"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="StaticResultText" Text="-" TextWrapping="Wrap"/>
 
-				</StackPanel>
-			</Border>
-
-		</StackPanel>
-
+                            <TextBlock Grid.Row="3" Grid.Column="0" Text="Scan ID" VerticalAlignment="Center" Opacity="0.7"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="ScanIdText" Text="-" Opacity="0.5" FontSize="11" TextWrapping="Wrap"/>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </StackPanel>
     </Grid>
 </Page>

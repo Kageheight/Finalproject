@@ -13,7 +13,10 @@ namespace QSightClient.Pages
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            LogsList.ItemsSource = null;
+            //LogsList.ItemsSource = null;
+            //LogsList.ItemsSource = App.Logs.Logs;
+
+            App.Logs.LoadFromDisk();
             LogsList.ItemsSource = App.Logs.Logs;
         }
 

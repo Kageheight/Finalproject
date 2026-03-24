@@ -1,3 +1,4 @@
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
 using QSightClient.Models;
@@ -20,5 +21,13 @@ namespace QSightClient.Pages
                 ResultText.Text = log.Result;
             }
         }
+
+        //private void BackButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (Frame.CanGoBack)
+        //    {
+        //        Frame.GoBack();
+        //    }
+        //}
     }
 }

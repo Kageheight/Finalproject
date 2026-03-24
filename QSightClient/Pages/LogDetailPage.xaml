@@ -10,6 +10,31 @@
 
     <Grid Padding="20">
 
+        <!--<StackPanel Orientation="Horizontal" Margin="20,10,0,10">
+            <Button x:Name="BackButton" 
+            Click="BackButton_Click"
+            Content="" 
+            FontFamily="Segoe MDL2 Assets" 
+            FontSize="16"
+            Background="Transparent"
+            VerticalAlignment="Center"/>
+            <TextBlock Text="Scan Detail" 
+               FontSize="24" 
+               FontWeight="Bold" 
+               Margin="15,0,0,0" 
+               VerticalAlignment="Center"/>
+
+            <TextBlock Text="File"/>
+            <TextBlock x:Name="FileText"/>
+
+            <TextBlock Text="Scan Time"/>
+            <TextBlock x:Name="TimeText"/>
+
+            <TextBlock Text="Result"/>
+            <TextBlock x:Name="ResultText"/>
+
+        </StackPanel>-->
+
         <StackPanel Spacing="12">
 
             <TextBlock

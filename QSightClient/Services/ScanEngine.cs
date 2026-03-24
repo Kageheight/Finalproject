@@ -40,7 +40,8 @@ namespace QSightClient.Services
                         FileName = fileName,
                         Result = "clean",
                         StaticResult = "whitelisted",
-                        Timestamp = DateTime.Now
+                        Timestamp = DateTime.Now,
+                        Sha256 =sha256
                     };
 
                     App.Logs.SaveLog(whiteLog);
@@ -76,14 +77,16 @@ namespace QSightClient.Services
                 OnStatusChanged?.Invoke($"Scan Complete: {staticResult}");
                 OnProgressChanged?.Invoke(100);
 
-                var resultLog = new ScanLog{
+                var resultLog = new ScanLog
+                {
                     FilePath = path,
                     FileName = fileName,
                     ScanId = scanId,
                     StaticResult = staticResult,
                     Timestamp = DateTime.Now,
                     ScanTime = DateTime.Now,
-                    Result = staticResult
+                    Result = staticResult,
+                    Sha256 = sha256
                 };
 
                 // 로그 저장

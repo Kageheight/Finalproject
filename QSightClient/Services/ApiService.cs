@@ -75,7 +75,7 @@ namespace QSightClient.Services
 
                 var status = response.StatusCode.ToString();
                 var body = await response.Content.ReadAsStringAsync();
-                System.IO.File.WriteAllText(@"C:\Users\jeang\Desktop\complete_result.txt",
+                System.IO.File.WriteAllText(@"C:\Users\Kongs\Desktop\complete_result.txt",
                     $"Status: {status}\nBody: {body}\nScanId: {scanId}");
 
                 return response.IsSuccessStatusCode;

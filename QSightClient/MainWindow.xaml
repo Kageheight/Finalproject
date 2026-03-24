@@ -18,7 +18,10 @@
             x:Name="RootNav"
             PaneTitle="Q-Sight Agent"
             IsSettingsVisible="False"
-            PaneDisplayMode="Top">
+            PaneDisplayMode="Top"
+            IsBackButtonVisible="Visible" 
+            IsBackEnabled="False" 
+            BackRequested="RootNav_BackRequested">
 
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Dashboard" Icon="Home" Tag="status"/>
@@ -27,7 +30,13 @@
                 <NavigationViewItem Content="About" Icon="Help" Tag="about"/>
             </NavigationView.MenuItems>
 
-            <Frame x:Name="ContentFrame"/>
+            <ScrollViewer x:Name="RootScrollViewer"
+                          VerticalScrollBarVisibility="Auto" 
+                          HorizontalScrollBarVisibility="Disabled">
+
+                <Frame x:Name="ContentFrame" Padding="0"/>
+
+            </ScrollViewer>
 
         </NavigationView>
     </Grid>

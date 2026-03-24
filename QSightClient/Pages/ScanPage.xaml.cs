@@ -12,12 +12,12 @@ namespace QSightClient.Pages
     public sealed partial class ScanPage : Page
     {
         private string? _selectedFilePath;
-        //private string? _currentScanId;
         private ScanLog _selectedLog = new();
 
         public ScanPage()
         {
             InitializeComponent();
+            this.NavigationCacheMode = NavigationCacheMode.Enabled;
         }
 
         private async void SelectFile_Click(object sender, RoutedEventArgs e)
@@ -65,7 +65,11 @@ namespace QSightClient.Pages
             }
             finally
             {
-                StartScanButton.IsEnabled = true;
+                if(_selectedLog.StaticResult == "whitelisted")
+                    RegistWhiteListButton.IsEnabled = false;
+                else
+                    RegistWhiteListButton.IsEnabled = true;
+                
                 SelectFileButton.IsEnabled = true;
             }
         }
@@ -76,6 +80,7 @@ namespace QSightClient.Pages
                 return;
 
             App.WhiteList.Add(_selectedLog.FileName, _selectedLog.Sha256);
+            RegistWhiteListButton.IsEnabled = false;
 
             // 사용자 피드백
             ScanStatusText.Text = "화이트리스트에 등록되었습니다.";
